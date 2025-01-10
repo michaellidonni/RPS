@@ -1,6 +1,8 @@
 .navbar {
     background: black !important;
+    --bs-navbar-brand-hover-color: white;
 }
+
 
 .navbar-brand {
     font-size: 50px;
