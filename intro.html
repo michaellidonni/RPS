@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Rock, Paper, Scissors</title>
+    <title>Title</title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta
@@ -16,48 +16,32 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="intro.css" />
   </head>
 
   <body>
     <header>
-      <nav class="navbar bg-body-tertiary">
-        <a class="navbar-brand mx-auto">Rock, Paper, Scissors</a>
-      </nav>
+      <!-- place navbar here -->
     </header>
     <main>
       <div class="container-fluid">
-        <div class="row scorecards">
-          <div class="col-2 score1">
-            <div id="username">Name</div>
-            <br />
-            0
-          </div>
-          <div class="col-2 empty"></div>
-          <div class="col-2 score2">
-            Computer <br /><br />
-            0
+        <div class="row">
+          <div class="col-12">
+            <h1>
+              Hello Welcome to Rock Paper Scissors Please Enter Your Name Below!
+            </h1>
           </div>
         </div>
-        <div class="row selections">
-          <div class="col-4 player-selection"></div>
-          <div class="col-2 empty"></div>
-          <div class="col-4 computer-selection"></div>
-        </div>
-        <div class="row buttons">
-          <button class="rock" onclick="playGame('rock')">✊</button>
-          <button class="paper" onclick="playGame('paper')">🖐️</button>
-          <button class="scissors" onclick="playGame('scissors')">✌️</button>
-        </div>
-        <div class="row reset">
-          <div class="col-2">
-            <button class="reset-btn">Reset</button>
+        <div class="row">
+          <div class="col-12">
+            <input type="text" id="inputBox" />
+            <button>Display</button>
           </div>
         </div>
       </div>
     </main>
     <footer>
-      <p></p>
+      <!-- place footer here -->
     </footer>
     <!-- Bootstrap JavaScript Libraries -->
     <script
