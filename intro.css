@@ -2,3 +2,16 @@ h1 {
     text-align: center;
 
 }
+
+h5 {
+    text-align: center;
+}
+
+.container-fluid {
+    margin-top: 20%;
+}
+
+#inputBox {
+    margin-top: 1%;
+    width: 25%;
+}
