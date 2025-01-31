@@ -1,10 +1,15 @@
+body {
+    background-color: black;
+}
+
 h1 {
     text-align: center;
-
+    color: white;
 }
 
 h5 {
     text-align: center;
+    color: white;
 }
 
 .container-fluid {
@@ -14,4 +19,11 @@ h5 {
 #inputBox {
     margin-top: 1%;
     width: 25%;
+    border-color: rgb(116, 114, 114);
+    border-width: 5px;
+}
+
+button {
+    border-color: rgb(116, 114, 114);
+    border-width: 5px;
 }

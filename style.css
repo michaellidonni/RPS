@@ -16,14 +16,14 @@
 }
 
 .score1 {
-    background: #6e9ffc;
+    background: lightgray;
     width: 231px;
     height: 106.4px;
     flex-shrink: 0;
 }
 
 .score2 {
-    background: #6e9ffc;
+    background: lightgray;
     width: 231px;
     height: 106.4px;
     flex-shrink: 0;
@@ -40,14 +40,14 @@
     width: 473px;
     height: 341px;
     flex-shrink: 0;
-    background: #8CE077;
+    background: rgb(185, 154, 154);
 }
 
 .computer-selection {
     width: 473px;
     height: 341px;
     flex-shrink: 0;
-    background: #8CE077;
+    background: rgb(185, 154, 154);
 }
 
 .buttons {
@@ -100,3 +100,8 @@ footer {
     color: white;
     text-align: center;
   }
+
+  body {
+    background-color: #6D6466;
+  }
+  
