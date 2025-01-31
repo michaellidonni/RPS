@@ -1,3 +1,22 @@
+function submitName() {
+  const name = document.getElementById("inputBox").value;
+  if (name) {
+    localStorage.setItem("username", name);
+    location.href = "index.html";
+  } else {
+    alert("Please enter your name!");
+  }
+}
+
+function displayUsername() {
+  const username = localStorage.getItem("username");
+  if (username) {
+    document.getElementById("username").innerText = username;
+  }
+}
+
+displayUsername();
+
 const getUserChoice = (userInput) => {
   userInput = userInput.toLowerCase();
   if (
