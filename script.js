@@ -1,6 +1,25 @@
-let name = prompt("What is your name?");
-let username = `${name}`;
-document.getElementById("username").innerHTML = username;
+// let name = prompt("What is your name?");
+// let username = `${name}`;
+// document.getElementById("username").innerHTML = username;
+
+function submitName() {
+  const name = document.getElementById("inputBox").value;
+  if (name) {
+    localStorage.setItem("username", name);
+    location.href = "index.html";
+  } else {
+    alert("Please enter your name!");
+  }
+}
+
+function displayUsername() {
+  const username = localStorage.getItem("username");
+  if (username) {
+    document.getElementById("username").innerText = username;
+  }
+}
+
+displayUsername();
 
 const getComputerChoice = () => {
   const randomNumber = Math.floor(Math.random() * 3);
