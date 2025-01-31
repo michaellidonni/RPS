@@ -7,7 +7,6 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-
     <!-- Bootstrap CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
@@ -16,53 +15,61 @@
     />
     <link rel="stylesheet" href="style.css" />
   </head>
-
   <body>
     <header>
       <nav class="navbar bg-body-tertiary">
         <a class="navbar-brand mx-auto">Rock, Paper, Scissors</a>
       </nav>
     </header>
+
     <main>
       <div class="container-fluid">
         <div class="row scorecards">
           <div class="col-2 score1">
             <div id="username">Name</div>
-            <!-- Placeholder for username -->
             <br />
-            0
+            <div id="score1">0</div>
+            <!-- Player's score -->
           </div>
           <div class="col-2 empty"></div>
           <div class="col-2 score2">
             Computer <br /><br />
-            0
+            <div id="score2">0</div>
+            <!-- Computer's score -->
           </div>
         </div>
         <div class="row selections">
-          <div class="col-4 player-selection"></div>
+          <div class="col-4 player-selection" id="player-selection"></div>
+          <!-- Player's selection -->
           <div class="col-2 empty"></div>
-          <div class="col-4 computer-selection"></div>
+          <div class="col-4 computer-selection" id="computer-selection"></div>
+          <!-- Computer's selection -->
         </div>
         <div class="row buttons">
-          <button class="rock" onclick="playGame('rock')">✊</button>
-          <button class="paper" onclick="playGame('paper')">🖐️</button>
-          <button class="scissors" onclick="playGame('scissors')">✌️</button>
+          <button class="rock" id="rock" onclick="playGame('rock')">✊</button>
+          <button class="paper" id="paper" onclick="playGame('paper')">
+            🖐️
+          </button>
+          <button class="scissors" id="scissors" onclick="playGame('scissors')">
+            ✌️
+          </button>
         </div>
         <div class="row reset">
           <div class="col-2">
-            <button class="reset-btn">Reset</button>
+            <button class="reset-btn" onclick="resetGame()">Reset</button>
           </div>
         </div>
       </div>
     </main>
+
     <footer><p></p></footer>
+
     <!-- Bootstrap JavaScript Libraries -->
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
       integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
       crossorigin="anonymous"
     ></script>
-
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
       integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
