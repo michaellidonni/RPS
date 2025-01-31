@@ -78,7 +78,6 @@ const maxRounds = 5;
 
 const playGame = (userChoice) => {
   if (roundsPlayed >= maxRounds) {
-    // Prevent playing after 5 rounds
     alert("Game Over! Please reset the game.");
     return;
   }
@@ -86,35 +85,43 @@ const playGame = (userChoice) => {
   const playerSelection = getUserChoice(userChoice);
   const computerSelection = getComputerChoice();
 
-  // Get the result of the game
+  if (playerSelection === "rock") {
+    document.getElementById("player-selection").innerHTML =
+      '<img src="imgs/rock.png" alt="Rock" />';
+  } else if (playerSelection === "paper") {
+    document.getElementById("player-selection").innerHTML =
+      '<img src="imgs/paper.png" alt="Paper" />';
+  } else if (playerSelection === "scissors") {
+    document.getElementById("player-selection").innerHTML =
+      '<img src="imgs/scissors.png" alt="Scissors" />';
+  }
+
+  if (computerSelection === "rock") {
+    document.getElementById("computer-selection").innerHTML =
+      '<img src="imgs/rock.png" alt="Rock" />';
+  } else if (computerSelection === "paper") {
+    document.getElementById("computer-selection").innerHTML =
+      '<img src="imgs/paper.png" alt="Paper" />';
+  } else if (computerSelection === "scissors") {
+    document.getElementById("computer-selection").innerHTML =
+      '<img src="imgs/scissors.png" alt="Scissors" />';
+  }
+
   const result = determineWinner(playerSelection, computerSelection);
 
-  // Update player's and computer's selections on the page
-  document.getElementById(
-    "player-selection"
-  ).innerText = `Your choice: ${playerSelection}`;
-  document.getElementById(
-    "computer-selection"
-  ).innerText = `Computer choice: ${computerSelection}`;
-
-  // Update the score based on the result
   if (result === "You won!") {
     playerScore++;
   } else if (result === "Computer won.") {
     computerScore++;
   }
 
-  // Display the result of each round in an alert
   alert(result);
 
-  // Display the updated scores
   document.getElementById("score1").innerText = playerScore;
   document.getElementById("score2").innerText = computerScore;
 
-  // Increment rounds played
   roundsPlayed++;
 
-  // Disable the play buttons after 5 rounds
   if (roundsPlayed >= maxRounds) {
     document.getElementById("rock").disabled = true;
     document.getElementById("paper").disabled = true;
@@ -123,7 +130,6 @@ const playGame = (userChoice) => {
 };
 
 const resetGame = () => {
-  // Reset scores and selections
   playerScore = 0;
   computerScore = 0;
   roundsPlayed = 0;
@@ -133,7 +139,6 @@ const resetGame = () => {
   document.getElementById("computer-selection").innerText =
     "Computer's choice: ";
 
-  // Re-enable the play buttons
   document.getElementById("rock").disabled = false;
   document.getElementById("paper").disabled = false;
   document.getElementById("scissors").disabled = false;
