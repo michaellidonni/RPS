@@ -20,22 +20,25 @@
   <body>
     <header></header>
     <main>
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-12">
-            <h1>Hello! Welcome to Rock Paper Scissors.</h1>
-            <h5>Please Enter Your Name Below!</h5>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-12 text-center textBox">
-            <input type="text" id="inputBox" placeholder="Enter your name" />
-            <button onclick="submitName()">Enter</button>
-          </div>
+      <div
+        class="container-fluid d-flex justify-content-center align-items-center"
+      >
+        <div class="text-center p-4 text-white rounded">
+          <h1 class="mb-4">Hello! Welcome to Rock Paper Scissors.</h1>
+          <h5 class="mb-4">Please Enter Your Name Below!</h5>
+          <!-- Text Box -->
+          <input
+            type="text"
+            id="inputBox"
+            class="form-control mb-3"
+            placeholder="Enter your name"
+          />
+          <button onclick="submitName()" class="btn-lg w-100">Enter</button>
         </div>
       </div>
     </main>
     <footer></footer>
+
     <!-- Bootstrap JavaScript Libraries -->
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"

@@ -1,29 +1,41 @@
 body {
+    background-color: #222222; 
+    font-family: 'Arial', sans-serif;
+  }
+  
+  h1 {
+    color: white;
+  }
+  
+  h5 {
+    color: white;
+  }
+  
+  .container-fluid {
+    height: 100vh;
+  }
+  
+  #inputBox {
+    width: 100%;
+    margin-bottom: 15px;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: white;
+    color: white;
+  }
+  
+  button {
+    border: 2px solid white;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1.2rem;
     background-color: black;
-}
-
-h1 {
-    text-align: center;
     color: white;
-}
-
-h5 {
-    text-align: center;
-    color: white;
-}
-
-.container-fluid {
-    margin-top: 20%;
-}
-
-#inputBox {
-    margin-top: 1%;
-    width: 25%;
-    border-color: rgb(116, 114, 114);
-    border-width: 5px;
-}
-
-button {
-    border-color: rgb(116, 114, 114);
-    border-width: 5px;
-}
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #222222;
+  }
+  

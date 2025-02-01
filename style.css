@@ -1,6 +1,7 @@
 /* Navbar */
 .navbar {
     background: #1A1A1A !important;
+    --bs-navbar-brand-hover-color: none;
 }
 
 .navbar-brand {
@@ -78,7 +79,7 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
 }
 
-/* Buttons Styling */
+/* Buttons */
 .buttons {
     display: flex;
     justify-content: center;
