@@ -17,48 +17,62 @@
   </head>
   <body>
     <header>
-      <nav class="navbar bg-body-tertiary">
+      <nav class="navbar">
         <a class="navbar-brand mx-auto">Rock, Paper, Scissors</a>
       </nav>
     </header>
 
     <main>
-      <div class="container-fluid">
-        <div class="row scorecards">
-          <div class="col-2 score1">
+      <div class="container-fluid text-center">
+        <div class="row justify-content-center scorecards">
+          <div class="col-md-3 col-sm-5 score1">
             <div id="username">Name</div>
             <div id="score1">0</div>
-            <!-- Player's score -->
           </div>
-          <div class="col-2 empty"></div>
-          <div class="col-2 score2">
+          <div class="col-md-1 col-sm-1"></div>
+          <div class="col-md-3 col-sm-5 score2">
             Computer <br />
             <div id="score2">0</div>
-            <!-- Computer's score -->
           </div>
         </div>
-        <div class="row selections">
-          <div class="col-4 player-selection" id="player-selection">
-            <img src="imgs/RPS.png" alt="" srcset="" />
+
+        <div class="row justify-content-center selections">
+          <div class="col-md-4 col-sm-5 player-selection" id="player-selection">
+            <img src="imgs/RPS.png" alt="" />
           </div>
-          <!-- Player's selection -->
-          <div class="col-2 empty"></div>
-          <div class="col-4 computer-selection" id="computer-selection">
-            <img src="imgs/RPS.png" alt="" srcset="" />
+          <div class="col-md-1 col-sm-1"></div>
+          <div
+            class="col-md-4 col-sm-5 computer-selection"
+            id="computer-selection"
+          >
+            <img src="imgs/RPS.png" alt="" />
           </div>
-          <!-- Computer's selection -->
         </div>
-        <div class="row buttons">
-          <button class="rock" id="rock" onclick="playGame('rock')">✊</button>
-          <button class="paper" id="paper" onclick="playGame('paper')">
-            🖐️
-          </button>
-          <button class="scissors" id="scissors" onclick="playGame('scissors')">
-            ✌️
-          </button>
+
+        <div class="row justify-content-center buttons">
+          <div class="col-auto">
+            <button class="rock" id="rock" onclick="playGame('rock')">
+              ✊
+            </button>
+          </div>
+          <div class="col-auto">
+            <button class="paper" id="paper" onclick="playGame('paper')">
+              🖐️
+            </button>
+          </div>
+          <div class="col-auto">
+            <button
+              class="scissors"
+              id="scissors"
+              onclick="playGame('scissors')"
+            >
+              ✌️
+            </button>
+          </div>
         </div>
-        <div class="row reset">
-          <div class="col-2">
+
+        <div class="row justify-content-center reset">
+          <div class="col-12 text-center">
             <button class="reset-btn" onclick="resetGame()">Reset</button>
           </div>
         </div>

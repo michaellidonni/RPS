@@ -123,6 +123,14 @@ const playGame = (userChoice) => {
   roundsPlayed++;
 
   if (roundsPlayed >= maxRounds) {
+    if (playerScore > computerScore) {
+      alert("Game Over! You win please reset the game!");
+    } else if (playerScore < computerScore) {
+      alert("Game Over! The computer wins please reset the game!");
+    } else {
+      alert("Game Over! It's a tie please reset the game!");
+    }
+
     document.getElementById("rock").disabled = true;
     document.getElementById("paper").disabled = true;
     document.getElementById("scissors").disabled = true;
