@@ -1,3 +1,5 @@
+// Name Input
+
 function submitName() {
   const name = document.getElementById("inputBox").value;
   if (name) {
@@ -17,6 +19,8 @@ function displayUsername() {
 
 displayUsername();
 
+// Takes User Input
+
 const getUserChoice = (userInput) => {
   userInput = userInput.toLowerCase();
   if (
@@ -30,6 +34,8 @@ const getUserChoice = (userInput) => {
   }
 };
 
+//  Picks random option for Computer
+
 const getComputerChoice = () => {
   const randomNumber = Math.floor(Math.random() * 3);
   switch (randomNumber) {
@@ -42,6 +48,7 @@ const getComputerChoice = () => {
   }
 };
 
+// Determines Winner
 const determineWinner = (userChoice, computerChoice) => {
   if (userChoice === computerChoice) {
     return "The game is a tie!";
@@ -71,6 +78,7 @@ const determineWinner = (userChoice, computerChoice) => {
   }
 };
 
+//Default values for score and rounds
 let playerScore = 0;
 let computerScore = 0;
 let roundsPlayed = 0;
@@ -85,6 +93,7 @@ const playGame = (userChoice) => {
   const playerSelection = getUserChoice(userChoice);
   const computerSelection = getComputerChoice();
 
+  // Imgs for each item
   if (playerSelection === "rock") {
     document.getElementById("player-selection").innerHTML =
       '<img src="imgs/rock.png" alt="Rock" />';
@@ -137,6 +146,7 @@ const playGame = (userChoice) => {
   }
 };
 
+//Reset Button
 const resetGame = () => {
   playerScore = 0;
   computerScore = 0;
